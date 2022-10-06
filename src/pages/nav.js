@@ -12,7 +12,7 @@ function Nav() {
                         <Link to = 'Home'>About</Link>
                     </li>
                     <li className='h-12'>
-                        <Link to = 'Home'>Projects</Link>
+                        <Link to = 'projects'>Projects</Link>
                     </li>
                     <li className='h-12'>
                         <Link to = 'contact'>Contact Me</Link>

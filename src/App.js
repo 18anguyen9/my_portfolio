@@ -4,6 +4,7 @@ import Home from './pages/home/home';
 import Body from './pages/body';
 import Nav from './pages/nav';
 import Contact from './pages/contact/contact'
+import Weatherbody from './pages/weather/weatherbody';
  
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Body />}> </Route>
           <Route path="/home" element={<Home />}> </Route>
           <Route path="/contact" element={<Contact />}> </Route>
+          <Route path="/projects" element={<Weatherbody />}> </Route>
         </Routes>
       </div>
       
