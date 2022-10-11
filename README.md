@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+## Welcome to Alex Nguyen's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Current Projects contained in this repo:
+-Weather App (Can be found in src/pages/weather)
 
 ## Available Scripts
 
