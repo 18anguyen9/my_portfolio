@@ -1,6 +1,6 @@
 ## Welcome to Alex Nguyen's Portfolio
 Hi, Welcome to my portfolio! If you would like to contact me, my email is 18anguyen9@gmail.com
-My personal portfolio is still a work in progress, but check out my weather app!
+My personal portfolio is still a work in progress, but check out my weather app!  
 
 ## Current Projects contained in this repo:
 -Weather App (Can be found in src/pages/weather)
