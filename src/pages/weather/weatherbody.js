@@ -1,45 +1,30 @@
 import { useState, useEffect } from "react";
 import Weathercall from './weathercall';
+import ForcastCall from './forcastCall';
+import {Forecast, Weather} from './apiCalls';
 
 function Weatherbody() {
-    const [data,setData] = useState({});
+    const [weatherdata,setWeatherData] = useState({});
     const [search,setSearch] = useState('');
     const [forcastData, setForcastData] = useState({});
     const apiKey = '60e013f11a1da052b3797129585e7fb3';
     const [goodCall, setgoodCall] = useState(true);
+    const [test,setTest] = useState(0);
 
+
+    // get weather and forcast data on submit
     const onClick = (e) => {
         e.preventDefault();
-        let forcastUrl;
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}&units=imperial`)
-            .then((response) => response.json())
-            .then((data) => {
-                //console.log(data.coord.lat);
-                //forcastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${apiKey}`;
-                console.log(data);
-                if (data.cod =='200'){
-                    setgoodCall(true);
-                }else{
-                    setgoodCall(false);
-                }
-                setData(data);
-            })
-            .catch((err) => console.log('error'));
+        const weather = (Weather(search)).then((data)=>{return data;});
+        weather.then((data)=>setWeatherData(data));
 
-        //const forcastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.lat}&lon=${data.lon}&appid=${apiKey}`;
-        /*if (forcastUrl!==null){
-            fetch(forcastUrl)
-            .then((response) => response.json())
-            .then((data) => setForcastData(data))
-            .catch((err) => console.log('error'));
-        }*/
+        const ft = weather.then((data)=> Forecast(data))
+        ft.then((data)=>setForcastData(data));
         
-        console.log(data);
-        //console.log(forcastUrl);
         setSearch('');
-        
+        setForcastData({});
     };
-
+    
     
 
     return (
@@ -58,7 +43,13 @@ function Weatherbody() {
                 <div className='text-center bg-red-600 my-2'>{goodCall ? null: 'Please Enter a Valid City'}</div>
             </form>
 
-            {goodCall ? <Weathercall data= {data}></Weathercall>: null}
+            <div className='px-32'>
+                {goodCall ? <Weathercall data= {weatherdata}></Weathercall>: null}
+                {goodCall ? <ForcastCall  forcastData = {forcastData}></ForcastCall>: null}
+
+            </div>
+            
+            
            
         </div>
 
