@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <link href="/dist/output.css" rel="stylesheet"></link>
-      <div className='flex h-screen relative'>
+      <div className='h-screen w-full bg-black'>
         <Nav></Nav>
         <Routes>
           <Route path="/" element={<Body />}> </Route>

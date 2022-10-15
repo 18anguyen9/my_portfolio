@@ -28,7 +28,7 @@ function Weatherbody() {
     
 
     return (
-        <div className='bg-weather w-full bg-cover text-white'>
+        <div className='bg-weather w-full bg-cover text-white h-screen'>
             <p className='pl-4 text-lg'>Weather App</p>
             
             <form onSubmit={onClick} className='text-center' >

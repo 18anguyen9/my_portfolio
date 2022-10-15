@@ -62,7 +62,7 @@ function Weathercall({ data }) {
         )
     }else{
         finalResult = (
-        <div className='bg-red-500 text-center'>Please enter Valid City</div>
+        <div className='bg-red-500 text-center'>Please enter a Valid City</div>
         )
     }
 

@@ -16,9 +16,14 @@ function ForcastCall({ forcastData }){
                 </div>
         })
         finalResult = (
-            <div className ='flex bg-slate-100  bg-opacity-60 justify-between rounded-lg pt-4 mt-8'>
-                {allDays.slice(1,6)}
+            <div className=''>
+                <p className='text-2xl'>5 Day Forecast</p>
+                <div className ='flex justify-between bg-slate-100  bg-opacity-60 rounded-lg pt-4 '>
+                    {allDays.slice(1,6)}
+                </div>
+
             </div>
+            
         )
     }else{
         finalResult = (<div></div>)

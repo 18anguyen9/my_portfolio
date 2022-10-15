@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 
 function Nav() {
         return (
-            <nav className='py-4 w-36 px-4 bg-slate-300 text-black h-full hidden lg:block'>
-                <ul className=''>
-                    <li className='h-12'>
+            <nav className='text-white'>
+                <ul className='flex justify-between px-32 pt-8 text-lg'>
+                    <li className=''>
                         <Link to = 'Home' >Home</Link>
                     </li>
-                    <li className='h-12'>
+                    <li className=''>
                         <Link to = 'Home'>About</Link>
                     </li>
-                    <li className='h-12'>
+                    <li className=''>
                         <Link to = 'projects'>Projects</Link>
                     </li>
-                    <li className='h-12'>
+                    <li className=''>
                         <Link to = 'contact'>Contact Me</Link>
                     </li>
                 </ul>
