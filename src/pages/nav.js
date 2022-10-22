@@ -15,14 +15,14 @@ function Nav() {
                         
                         <Link className='p-2' to = 'projects'>
                                 Projects &nbsp; &nbsp;
-                                <div class="h-0 w-0 absolute border-x-8 border-x-transparent border-t-[8px] border-t-white right-[8px] top-3"></div>
+                                <div className="h-0 w-0 absolute border-x-8 border-x-transparent border-t-[8px] border-t-white right-[8px] top-3"></div>
                         </Link>
 
                         <div className='bg-white  flex-wrap w-64 p-2 hidden text-black group-hover:flex absolute rounded-lg -left-6 top-8'>
                             <Link className='w-full' to = 'projects'>Weather App</Link>
                             <Link className='w-full' to = 'projects'>Weather App2</Link>
                             <Link className='w-full' to = 'projects'>Weather App3</Link>
-                            <div class="h-0 w-0 absolute border-x-8 border-x-transparent border-b-[8px] border-b-white right-[148px] -top-2"></div>
+                            <div className="h-0 w-0 absolute border-x-8 border-x-transparent border-b-[8px] border-b-white right-[148px] -top-2"></div>
                         </div>
                         
                     </li>

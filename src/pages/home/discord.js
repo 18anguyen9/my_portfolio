@@ -1,11 +1,11 @@
 import profile_pic from './../../profile_pic.JPEG'
-function Discord(){
+function Discord({ className }){
     const profilePic = require('./../../profile_pic2.JPEG');
     //<img className='w-6/12 h-1/12 rounded-lg' src={profilePic} />
     return (
-        <div className='mt-36 mr-64 w-80 h-96 ml-24 bg-slate-900 rounded-lg relative '>
-                <div className='bg-amber-600 rounded-t-lg h-1/4'>
-
+        <div className={'bg-slate-900 rounded-lg relative w-full ' + className}>
+                <div className='bg-amber-600 relative rounded-t-lg h-1/4'>
+                    <p className = 'text-black font-bold text-base absolute bottom-0 right-24'>About Me</p>
                 </div>
                 <div className='absolute left-4 top-12'>
                     <img className='h-24 w-24 rounded-full border-6 border-slate-900 ' src={profilePic} />
