@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Nav() {
         return (
-            <nav className='text-white'>
+            <nav className='text-white pb-2'>
                 <ul className='flex justify-between px-32 pt-8 text-lg'>
                     <li className=''>
                         <Link to = 'Home' >Home</Link>

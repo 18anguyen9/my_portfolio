@@ -5,10 +5,12 @@ function Contact(){
     const [email,setEmail] = useState('');
     const [message,setMessage] = useState('');
     const [subject,setSubject] = useState('');
-    const [success, setSuccess] = useState(false);
+    const [success, setSuccess] = useState('');
     const form = useRef();
+    const [fail,setFail] = useState('');
 
     const SendEmail = (e) =>{
+        
         e.preventDefault();
         console.log(form.current);
 
@@ -19,19 +21,22 @@ function Contact(){
             setEmail('');
             setMessage('');
             setSubject('');
-            setSuccess(true);
+            setSuccess('text-green-400');
+            setFail('Email was successfully sent!')
 
         }, (error) => {
             console.log(error.text);
+            setSuccess('text-red-400')
+            setFail('Sorry email was not sent. Email limit has been reached for the day.')
         });
 
 
     };
 
     return (
-        <div className='text-amber-600 ml-32 w-2/3'>
+        <div className='text-amber-600 ml-32 w-2/3 h-screen'>
             <p className='text-4xl pt-12'>Send Me a message!</p>
-            <form className = 'py-12' ref={form} onSubmit={SendEmail}>
+            <form className = 'pt-12' ref={form} onSubmit={SendEmail}>
                 <input
                 className='w-full p-6 my-4 bg-gray-900 rounded-lg'
                 placeholder='Your Name'
@@ -66,7 +71,8 @@ function Contact(){
 
                 <button className='w-1/4 rounded-lg p-2 mt-2 bg-gray-900 font-bold' onClick={SendEmail}>Submit</button>
             </form>
-            {success ? (<div>EMail was sent!</div>): (<div>EMail was failed!</div>)}
+            <div className={success}>{fail}</div>
+            
 
         </div>
     )
