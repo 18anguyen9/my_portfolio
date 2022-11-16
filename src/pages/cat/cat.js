@@ -1,6 +1,5 @@
 import city from '../../city.svg'
 import carl from '../../cat.svg'
-import catest from '../../catest.svg'
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import './cat.css';

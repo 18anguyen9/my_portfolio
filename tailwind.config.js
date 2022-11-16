@@ -15,8 +15,8 @@ module.exports = {
       animation:{
         'cityAnimation' :'city-Animation 20s linear infinite',
         'catAnimation' :'cat-Animation 1.9s steps(16) infinite',
-        'titleFade' : 'fadeIt 5s ease-in-out',
-        'fadeout' : 'fadeout 5s ease-out',
+        'titleFade' : 'fadeIt 3s ease-in-out',
+        'fadeout' : 'fadeout 3s ease-out',
         'fadein' : 'fadein 1s ease-in'
       },
       keyframes:{

@@ -8,9 +8,6 @@ function Nav() {
                     <li className=''>
                         <Link to = 'Home' >Home</Link>
                     </li>
-                    <li className=''>
-                        <Link to = 'Home'>About</Link>
-                    </li>
                     <li className='group relative'>
                         
                         <Link className='p-2' to = 'projects'>
@@ -20,8 +17,7 @@ function Nav() {
 
                         <div className='bg-white  flex-wrap w-64 p-2 hidden text-black group-hover:flex absolute rounded-lg -left-6 top-8'>
                             <Link className='w-full' to = 'projects'>Weather App</Link>
-                            <Link className='w-full' to = 'projects'>Weather App2</Link>
-                            <Link className='w-full' to = 'projects'>Weather App3</Link>
+                            <Link className='w-full' to = 'productivity'>Productivity App</Link>
                             <div className="h-0 w-0 absolute border-x-8 border-x-transparent border-b-[8px] border-b-white right-[148px] -top-2"></div>
                         </div>
                         

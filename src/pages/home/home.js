@@ -41,7 +41,7 @@ function Home() {
 		setTimeout(() => {
 			setLanding(true);
 			setfadein('animate-fadein')
-		}, 4900);
+		}, 2900);
         
     }
 	

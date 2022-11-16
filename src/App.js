@@ -6,19 +6,21 @@ import Nav from './pages/nav';
 import Contact from './pages/contact/contact'
 import Weatherbody from './pages/weather/weatherbody';
 import Cat from './pages/cat/cat';
+import Productivity from './pages/productivity';
  
 function App() {
   return (
-    <BrowserRouter>
-      <link href="/dist/output.css" rel="stylesheet"></link>
+    <BrowserRouter className=''>
+     
       <div className=' w-full bg-black'>
-        <Nav></Nav>
+        <Nav className=''></Nav>
         <Routes>
-          <Route path="/" element={<Body />}> </Route>
+          <Route path="/" element={<Home />}> </Route>
           <Route path="/home" element={<Home />}> </Route>
           <Route path="/contact" element={<Contact />}> </Route>
           <Route path="/projects" element={<Weatherbody />}> </Route>
           <Route path="/cat" element={<Cat />}> </Route>
+          <Route path="/productivity" element={<Productivity />}> </Route>
         </Routes>
       </div>
       
